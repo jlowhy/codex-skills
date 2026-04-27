@@ -5,10 +5,11 @@ description: Pause when work seems stuck, repetitive, or confused to reassess th
 
 Take a step back before continuing.
 
-State:
-- the current goal
-- why we seem stuck or looping
-- the actual issue
-- what we would do next knowing what we know now
+Use this shape:
+
+- `Goal`: the current goal
+- `Loop`: why the work seems stuck, repetitive, or confused
+- `Root issue`: the actual issue now visible
+- `Next move`: what to do next knowing what we know now
 
 Keep it concise and action-oriented.

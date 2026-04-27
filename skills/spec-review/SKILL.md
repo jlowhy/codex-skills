@@ -2,42 +2,45 @@
 name: spec-review
 description: Review the current code changes against the intended spec, reconstruct the expected behavior and scope first, then return prioritized, actionable findings about spec drift, missing coverage, feature creep, or overengineering.
 ---
+
 Review the current code changes against the comparison base, but first reconstruct the intended spec and implementation scope.
 
-Spec reconstruction order:
-- if there is relevant ongoing chat context, use that first
-- if the user pointed to a file, doc, issue, follow-up note, PR text, or benchmark artifact, use that next
-- otherwise infer the most likely intended behavior and scope from the current diff, touched tests, and surrounding code
+## Reconstruct The Spec
 
-Before giving findings, state:
-- what the key specs and behaviors are
-- what the technical implementation is supposed to cover
-- what it is not supposed to cover
-- what looks like feature creep, speculative work, or overengineering risk
-- what evidence you used to infer the above when the spec was not explicitly provided
+Use evidence in this order:
 
-Then review against that reconstructed spec.
+- ongoing chat context
+- user-linked files, docs, issues, follow-up notes, PR text, screenshots, or benchmark artifacts
+- the current diff, changed tests, and surrounding code
+
+Before findings, briefly state:
+
+- intended behavior
+- in-scope implementation boundaries
+- out-of-scope boundaries
+- evidence used, especially when the spec is inferred
+- any material uncertainty that would change the review outcome
+
+## Review Focus
 
 Prioritize findings where the implementation:
-- does not actually satisfy the intended behavior
-- partially satisfies the behavior but leaves important gaps
+
+- misses or only partially satisfies the intended behavior
 - drifts beyond the intended scope
-- introduces architectural churn, abstraction churn, or complexity that the spec did not require
+- introduces feature creep, speculative flexibility, or unnecessary abstraction
 - mixes unrelated improvements into a spec-bound change
-- adds future-facing flexibility without a demonstrated need in the current change
+- leaves required tests, fixtures, stories, types, docs, or contract updates behind
 
-If the intended spec is materially uncertain, say so explicitly and separate:
-- likely spec violations
-- likely overengineering or feature-creep concerns
-- questions or assumptions that would change the review outcome
+## Output
 
-In your findings, explain:
-- what the problem is
-- what effect the problem will have
-- whether it is a spec miss, spec drift, feature creep, or overengineering
-- what potential fixes exist, if more than one
-- what the recommended fix is and why
-- the key file references for the fix
-- what the behavior will be after the fix
+Findings first after the spec reconstruction, ordered by severity. For each finding include:
 
-Prefer review comments that defend the intended behavior and scope over comments that only point out local code quality.
+- `Severity`: blocker, high, medium, or low
+- `Type`: spec miss, spec drift, feature creep, overengineering, or missing coverage
+- `File`: precise file and line reference when possible
+- `Issue`: what is wrong relative to the intended spec
+- `Impact`: what behavior, reviewability, or ownership boundary is affected
+- `Recommended fix`: the smallest fix and why it matches the spec
+- `After fix`: the expected behavior after the fix
+
+Defend the intended behavior and scope. Avoid general code-quality commentary unless it changes correctness, scope, or maintainability in a concrete way.
