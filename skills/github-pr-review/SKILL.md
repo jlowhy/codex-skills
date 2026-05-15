@@ -74,6 +74,8 @@ If there are no blocking findings, say:
 - residual risk or test gaps
 - whether the structure is acceptable for this scope
 
+If verification fails, say what was attempted, the shortest useful failure summary, whether it appears caused by the PR or by the environment, and how it affects confidence. Do not report it as a code finding unless it traces to the changed code; otherwise include it under proof gaps or residual risk.
+
 Publish by default unless the user asks for dry-run, preview, or local-only review.
 
 Route findings by anchor:
