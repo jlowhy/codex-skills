@@ -11,6 +11,7 @@ ${CODEX_HOME:-$HOME/.codex}/skills
 ## Skills
 
 - `post-implementation-cleanup`: behavior-preserving cleanup after an implementation works.
+- `github-pr-review`: GitHub PR review from live PR state, with optional inline and PR-level comments.
 - `simple-review`: prioritized review findings against the comparison base.
 - `spec-review`: review implementation drift against an intended spec.
 - `walkthrough`: explain and critique the current diff in review order.
@@ -21,7 +22,7 @@ Install selected skills as symlinks:
 
 ```bash
 ./install.sh post-implementation-cleanup
-./install.sh simple-review spec-review walkthrough
+./install.sh github-pr-review simple-review spec-review walkthrough
 ```
 
 Install a bundle:
