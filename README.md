@@ -15,6 +15,7 @@ ${CODEX_HOME:-$HOME/.codex}/skills
 - `simple-review`: prioritized review findings against the comparison base.
 - `spec-review`: review implementation drift against an intended spec.
 - `walkthrough`: explain and critique the current diff in review order.
+- `write-a-skill`: create new skills or improve existing skills through compression.
 
 ## Install
 
