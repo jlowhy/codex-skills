@@ -5,7 +5,7 @@ repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 target="${CODEX_HOME:-$HOME/.codex}/skills"
 
 usage() {
-  echo "Usage: $0 <skill...> | --bundle <bundle>"
+  echo "Usage: $0 <skill...>"
 }
 
 skills=()
@@ -17,22 +17,6 @@ fi
 
 while [[ "$#" -gt 0 ]]; do
   case "$1" in
-    --bundle)
-      if [[ "$#" -lt 2 ]]; then
-        usage >&2
-        exit 1
-      fi
-      bundle_file="$repo_dir/bundles/$2.txt"
-      if [[ ! -f "$bundle_file" ]]; then
-        echo "Missing bundle: $2" >&2
-        exit 1
-      fi
-      while IFS= read -r skill || [[ -n "$skill" ]]; do
-        [[ -z "$skill" || "$skill" == \#* ]] && continue
-        skills+=("$skill")
-      done < "$bundle_file"
-      shift 2
-      ;;
     --help|-h)
       usage
       exit 0

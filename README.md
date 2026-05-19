@@ -24,13 +24,7 @@ Install selected skills as symlinks:
 ```bash
 ./install.sh post-implementation-cleanup
 ./install.sh github-pr-review simple-review spec-review walkthrough
-```
-
-Install a bundle:
-
-```bash
-./install.sh --bundle review
-./install.sh --bundle cleanup
+./install.sh write-a-skill post-implementation-cleanup-loop
 ```
 
 By default, existing installed skill folders are replaced with symlinks to this repository. A timestamped backup is created under:
@@ -43,7 +37,6 @@ ${CODEX_HOME:-$HOME/.codex}/skills/.backup/
 
 ```text
 skills/<skill-name>/SKILL.md
-bundles/<bundle-name>.txt
 install.sh
 ```
 
