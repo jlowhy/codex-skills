@@ -1,6 +1,6 @@
 # Codex Skills
 
-Personal Codex skills for review, cleanup, and implementation workflows.
+Personal Codex skills for writing and transcript workflows.
 
 This repository is the source of truth. The runtime install location is:
 
@@ -10,21 +10,20 @@ ${CODEX_HOME:-$HOME/.codex}/skills
 
 ## Skills
 
-- `post-implementation-cleanup`: behavior-preserving cleanup after an implementation works.
-- `github-pr-review`: GitHub PR review from live PR state, with optional inline and PR-level comments.
-- `simple-review`: prioritized review findings against the comparison base.
-- `spec-review`: review implementation drift against an intended spec.
-- `walkthrough`: explain and critique the current diff in review order.
-- `write-a-skill`: create new skills or improve existing skills through compression.
+- `harness-engineering`: audit, align, implement, verify, and publish codebase harness improvements for coding-agent workflows.
+- `youtube-transcript-capture`: capture YouTube metadata and transcript-derived notes into the notes vault.
+- `writing-grill`: grill a piece of writing until its essence, narrative structure, tension, and payoff are clear.
+- `writing-sharpen`: clean up existing writing by cutting AI-ish scaffolding, filler, and vague synthesis.
 
 ## Install
 
 Install selected skills as symlinks:
 
 ```bash
-./install.sh post-implementation-cleanup
-./install.sh github-pr-review simple-review spec-review walkthrough
-./install.sh write-a-skill post-implementation-cleanup-loop
+./install.sh harness-engineering
+./install.sh youtube-transcript-capture
+./install.sh writing-grill
+./install.sh writing-sharpen
 ```
 
 By default, existing installed skill folders are replaced with symlinks to this repository. A timestamped backup is created under:
