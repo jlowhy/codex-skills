@@ -75,7 +75,7 @@ Group recommendations by audit dimension. Within each group, identify the prefer
 
 Use **do not build yet** for attractive but premature controls, especially when they are lower leverage, higher maintenance, harder to verify, or less connected to observed failures than the preferred option.
 
-Lead each prioritized recommendation with the concrete workflow failure or improvement in plain English, then add harness classification. Do not make the reader infer the causal chain from separate bullets.
+Write in a technical, precise, easy-to-understand style. Lead each prioritized recommendation with the concrete workflow failure or improvement, then add harness classification. Do not make the reader infer the causal chain from separate bullets.
 
 ## Grilling
 

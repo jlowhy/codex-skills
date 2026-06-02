@@ -2,6 +2,10 @@
 
 The report must show the whole harness before ranking implementation-ready recommendations.
 
+## Reply Style
+
+Write in technical, precise, easy-to-understand language. Prefer concrete workflow names, commands, files, and observed behavior over harness taxonomy. Use harness taxonomy as trailing classification, not as the main explanation.
+
 ## 1. Repo Topology
 
 Summarize the repo shape, runtime, package manager, test framework, CI model, release/deploy model, current agent workflow, and commands verified or skipped.
@@ -33,8 +37,8 @@ Every prioritized recommendation must have a concrete title, such as `Fix valida
 
 For every prioritized recommendation, include:
 
-- **Plain-English finding**: one or two sentences that explain the issue without harness taxonomy
-- **Concrete example**: one representative file, command, workflow, or user path that shows the issue
+- **Finding**: one or two clear sentences that explain the concrete issue or improvement
+- **Example**: one representative file, command, workflow, or user path that shows the issue
 - **Actual behavior**: what happens today
 - **Expected behavior**: what should happen instead
 - **Why it matters**: the concrete risk, false confidence, repeated failure, or wasted effort
