@@ -17,15 +17,19 @@ Create one subsection for each audit dimension:
 
 Each subsection must include:
 
-- **Current state**: what exists and where
-- **Issues found**: evidence-bound gaps, contradictions, or friction
+- **Current behavior**: how the relevant guide, feedback sensor, workflow, or architecture works today. Include the exact files, commands, config paths, and conditions where it does or does not apply.
+- **Observed gap**: the mismatch, missing route, contradiction, weak signal, or navigation friction. State the condition that exposes it.
 - **Candidate improvements**: viable options, not only the favorite
 - **Preferred recommendation**: the best option for this dimension and why
+- **Expected new behavior**: what will be true after the recommendation is implemented
+- **Proof plan**: checks, dry-runs, file reads, or runtime observations that would prove the gap is closed
 - **Do not build yet**: tempting controls to defer and why
 
 ## 3. Prioritized Recommendations
 
 Rank the cross-dimension top recommendations. Explain the ordering using leverage, confidence, effort, time-to-feedback, and maintenance cost.
+
+For each top recommendation, include a concise current-to-future delta: how it works today, what changes, and what proof will show the improvement.
 
 Group lower-priority items by audit dimension so the user can still see the full option space.
 
