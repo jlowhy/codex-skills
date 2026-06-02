@@ -9,6 +9,8 @@ Use this as a diagnosis and recommendation skill.
 
 A codebase harness is the outer system of feedforward guides, feedback sensors, workflows, and codebase properties that helps coding agents get work right, self-correct quickly, and leave the right decisions to humans.
 
+Apply [EVIDENCE-STANDARD.md](EVIDENCE-STANDARD.md) to every audit.
+
 ## Definitions
 
 - **Feedforward guide**: a control that steers the agent before it acts, such as repo instructions, skills, docs, examples, templates, rules, codemods, or bootstrap scripts.
@@ -61,13 +63,11 @@ The main agent owns final judgment. It traces the highest-risk path itself, vali
 
 Do not produce an implementation brief until every audit dimension has current state, issues found, candidate improvements, a preferred recommendation, and do-not-build-yet items.
 
-## Behavior Harness Standard
+## Additional Checks
 
-Flag weak behavior confidence when tests mostly mirror the implementation, over-mock the boundary, rely on manual review, or lack an independent expected result such as a spec, fixture, golden file, contract, e2e path, user example, seeded data, or runtime signal.
-
-## Navigation And Architecture
-
-Evaluate whether an agent can quickly understand where concepts live, where changes belong, and how to verify them. Flag architecture friction when the repo has unclear maps, ownership, or entry points; one concept spread across shallow modules; mechanism-first names instead of domain language; stale or missing architecture docs/ADRs; tests that cannot exercise caller-facing interfaces; or runtime state, logs, fixtures, and dev servers that are hard to inspect.
+- **Behavior**: flag weak confidence when tests mirror implementation, over-mock boundaries, rely on manual review, or lack an independent expected result.
+- **Navigation and architecture**: flag friction when agents cannot quickly find concepts, ownership, entrypoints, intended layers, caller-facing test interfaces, or inspectable runtime state.
+- **Operating model**: evaluate bootstrap/startup reachability, root command surface, workspace boundaries, graph-aware task execution, CI/local alignment, and validation reachability. Flag false confidence from docs drift, warmed local state, ignored files, partial task success, or package-local commands that bypass the repo-owned path.
 
 ## Prioritization Rubric
 
