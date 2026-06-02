@@ -23,10 +23,12 @@ Create one subsection for each audit dimension:
 
 Each subsection must include:
 
+- **Coverage**: surfaces searched, inspected, and not covered
 - **Current state**: what exists and where
 - **Issues found**: evidence-bound gaps, contradictions, or friction
 - **Candidate improvements**: viable options, not only the favorite
 - **Preferred recommendation**: the best option for this dimension and why
+- **Confidence**: high, medium, or low, with reason if not high
 - **Do not build yet**: tempting controls to defer and why
 
 ## 3. Prioritized Recommendations
@@ -47,6 +49,7 @@ For every prioritized recommendation, include:
 - **Observed gap**: the mismatch, missing route, contradiction, weak signal, or navigation friction
 - **Expected new behavior**: what will be true after the change
 - **Why prioritized here**: why this outranks lower items or follows higher items
+- **Dependencies and sequencing**: what this depends on and what it unlocks
 - **Implementation approach**: concrete change shape, not code-level design unless needed
 - **Files and commands likely to change**: expected edit surface and command surface
 - **Proof plan**: checks, dry-runs, file reads, or runtime observations that would prove the gap is closed

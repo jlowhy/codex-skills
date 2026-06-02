@@ -9,7 +9,7 @@ Use this as a diagnosis and recommendation skill.
 
 A codebase harness is the outer system of feedforward guides, feedback sensors, workflows, and codebase properties that helps coding agents get work right, self-correct quickly, and leave the right decisions to humans.
 
-Apply [EVIDENCE-STANDARD.md](EVIDENCE-STANDARD.md) to every audit.
+Apply [EVIDENCE-STANDARD.md](EVIDENCE-STANDARD.md) and [DELEGATED-AUDIT.md](DELEGATED-AUDIT.md) to every audit.
 
 ## Definitions
 
@@ -55,11 +55,7 @@ Prefer cheap, reliable computational controls. Use inferential controls for sema
 
 ## Delegated Audit
 
-Delegated audit is the core workflow. After topology is reconstructed, delegate focused audits for every dimension: feedforward guides and `AGENTS.md` placement, feedback sensors, human workflow, and harnessability/navigation.
-
-The main agent owns final judgment. It traces the highest-risk path itself, validates subagent findings against files/commands/docs/runtime behavior, and rejects duplicated, speculative, unactionable, or weakly evidenced findings.
-
-Do not produce prioritized recommendations until every audit dimension has current state, issues found, candidate improvements, a preferred recommendation, and do-not-build-yet items. When feedforward guides are a material finding, perform the full instruction-surface audit inside this skill.
+Delegated audit is the core workflow. Apply [DELEGATED-AUDIT.md](DELEGATED-AUDIT.md), including the mandatory full instruction-surface audit for feedforward guides. Do not produce prioritized recommendations until every audit dimension has current state, coverage, issues found, candidate improvements, a preferred recommendation, and do-not-build-yet items.
 
 ## Additional Checks
 
