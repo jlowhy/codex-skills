@@ -22,9 +22,7 @@ Apply [EVIDENCE-STANDARD.md](EVIDENCE-STANDARD.md) to every audit.
 
 ## Boundary
 
-Do not edit files, commit, push, or open a PR. Read files and run non-mutating commands only.
-
-If the user wants to implement an audit recommendation, hand off to `implement-with-alignment` using the chosen prioritized recommendation.
+Do not edit files, commit, push, or open a PR. Read files and run non-mutating commands only. If the user wants to implement an audit recommendation, hand off to `implement-with-alignment` using the chosen prioritized recommendation.
 
 ## Audit Flow
 
@@ -76,6 +74,8 @@ Prioritize improvements by expected harness leverage. Prefer recommendations tha
 Group recommendations by audit dimension. Within each group, identify the preferred recommendation and explain why it beats alternatives on leverage, confidence, effort, time-to-feedback, and maintenance cost.
 
 Use **do not build yet** for attractive but premature controls, especially when they are lower leverage, higher maintenance, harder to verify, or less connected to observed failures than the preferred option.
+
+Lead each prioritized recommendation with the concrete workflow failure or improvement in plain English, then add harness classification. Do not make the reader infer the causal chain from separate bullets.
 
 ## Grilling
 

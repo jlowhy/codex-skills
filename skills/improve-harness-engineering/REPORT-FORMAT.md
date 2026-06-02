@@ -29,8 +29,15 @@ Each subsection must include:
 
 Rank the cross-dimension prioritized recommendations. Explain the ordering using leverage, confidence, effort, time-to-feedback, and maintenance cost. The first recommendation is the default implementation candidate.
 
+Every prioritized recommendation must have a concrete title, such as `Fix validate:changed so changed integration tests actually run`. Avoid taxonomy-only titles.
+
 For every prioritized recommendation, include:
 
+- **Plain-English finding**: one or two sentences that explain the issue without harness taxonomy
+- **Concrete example**: one representative file, command, workflow, or user path that shows the issue
+- **Actual behavior**: what happens today
+- **Expected behavior**: what should happen instead
+- **Why it matters**: the concrete risk, false confidence, repeated failure, or wasted effort
 - **Evidence**: concrete file references, commands, configs, or observed behavior
 - **Current behavior**: how it works today, including exact files, commands, config paths, and the conditions where it does or does not apply
 - **Observed gap**: the mismatch, missing route, contradiction, weak signal, or navigation friction
@@ -39,8 +46,11 @@ For every prioritized recommendation, include:
 - **Implementation approach**: concrete change shape, not code-level design unless needed
 - **Files and commands likely to change**: expected edit surface and command surface
 - **Proof plan**: checks, dry-runs, file reads, or runtime observations that would prove the gap is closed
+- **Classification**: audit dimension, control type, and regulation category
 - **Risks and alignment questions**: decisions that must be settled before implementation
 - **Do not build yet**: tempting adjacent controls to defer and why
+
+For validation or command-routing recommendations, include the repro command, actual planned command or observed behavior, expected command or behavior, and the exact reason the current command does not cover the changed surface.
 
 For instruction-surface recommendations, also include what stays in `AGENTS.md`, what moves out, destination artifact, content classification, expected always-on token impact when relevant, and acceptance criteria.
 
