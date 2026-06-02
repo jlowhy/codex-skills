@@ -1,6 +1,6 @@
 # Harness Engineering Report Format
 
-The report must show the whole harness before narrowing to an implementation brief.
+The report must show the whole harness before ranking implementation-ready recommendations.
 
 ## 1. Repo Topology
 
@@ -27,22 +27,27 @@ Each subsection must include:
 
 ## 3. Prioritized Recommendations
 
-Rank the cross-dimension top recommendations. Explain the ordering using leverage, confidence, effort, time-to-feedback, and maintenance cost.
+Rank the cross-dimension prioritized recommendations. Explain the ordering using leverage, confidence, effort, time-to-feedback, and maintenance cost. The first recommendation is the default implementation candidate.
 
-For each top recommendation, include:
+For every prioritized recommendation, include:
 
 - **Evidence**: concrete file references, commands, configs, or observed behavior
 - **Current behavior**: how it works today, including exact files, commands, config paths, and the conditions where it does or does not apply
 - **Observed gap**: the mismatch, missing route, contradiction, weak signal, or navigation friction
 - **Expected new behavior**: what will be true after the change
+- **Why prioritized here**: why this outranks lower items or follows higher items
+- **Implementation approach**: concrete change shape, not code-level design unless needed
+- **Files and commands likely to change**: expected edit surface and command surface
 - **Proof plan**: checks, dry-runs, file reads, or runtime observations that would prove the gap is closed
+- **Risks and alignment questions**: decisions that must be settled before implementation
+- **Do not build yet**: tempting adjacent controls to defer and why
+
+For instruction-surface recommendations, also include what stays in `AGENTS.md`, what moves out, destination artifact, content classification, expected always-on token impact when relevant, and acceptance criteria.
+
+When instruction-surface refactoring is a prioritized recommendation, make it implementation-ready: quote only the current headings or bullets being changed, classify each change as remove/rewrite/relocate/add, name the destination file and section for relocated content, and specify the resulting `AGENTS.md` / skills / docs / scripts structure.
 
 Group lower-priority items by audit dimension so the user can still see the full option space.
 
-## 4. Implementation Brief
-
-Only write this after every harness-map dimension is covered. Include preferred option, why it moves the needle, alternatives considered, files and commands likely to change, current behavior, target state, implementation approach, expected benefit, verification and acceptance, do-not-build-yet items, and open alignment questions.
-
-## 5. Alignment Questions
+## 4. Alignment Questions
 
 Ask one question at a time when alignment is needed. Include the recommended answer or preferred direction with each question.

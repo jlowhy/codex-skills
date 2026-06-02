@@ -24,7 +24,7 @@ Apply [EVIDENCE-STANDARD.md](EVIDENCE-STANDARD.md) to every audit.
 
 Do not edit files, commit, push, or open a PR. Read files and run non-mutating commands only.
 
-If the user wants to implement the audit recommendations, hand off to `implement-with-alignment` with a concrete implementation brief.
+If the user wants to implement an audit recommendation, hand off to `implement-with-alignment` using the chosen prioritized recommendation.
 
 ## Audit Flow
 
@@ -36,7 +36,7 @@ Discover exact commands from real repo evidence: package files, Makefiles, task 
 
 Run the fastest representative checks where feasible. Inspect failures. Distinguish "harness exists on paper" from "harness works in this checkout". If a check is slow, flaky, expensive, credential-gated, or destructive, skip it and record why.
 
-Read agent instruction surfaces such as `AGENTS.md`, runtime skills, repo docs, and human-facing architecture docs. Evaluate whether each instruction belongs where it is: global agent rule, path-specific agent rule, reusable skill, human/agent readable doc, executable script, or feedback sensor. Apply [AGENTS-QUALITY.md](AGENTS-QUALITY.md).
+Read agent instruction surfaces such as `AGENTS.md`, runtime skills, repo docs, and human-facing architecture docs. Evaluate whether each instruction belongs where it is: global agent rule, path-specific agent rule, reusable skill, human/agent readable doc, executable script, or feedback sensor. Apply [INSTRUCTION-SURFACE.md](INSTRUCTION-SURFACE.md).
 
 ## Harness Map
 
@@ -61,7 +61,7 @@ Delegated audit is the core workflow. After topology is reconstructed, delegate 
 
 The main agent owns final judgment. It traces the highest-risk path itself, validates subagent findings against files/commands/docs/runtime behavior, and rejects duplicated, speculative, unactionable, or weakly evidenced findings.
 
-Do not produce an implementation brief until every audit dimension has current state, issues found, candidate improvements, a preferred recommendation, and do-not-build-yet items.
+Do not produce prioritized recommendations until every audit dimension has current state, issues found, candidate improvements, a preferred recommendation, and do-not-build-yet items. When feedforward guides are a material finding, perform the full instruction-surface audit inside this skill.
 
 ## Additional Checks
 
@@ -92,8 +92,8 @@ Challenge anti-patterns:
 - inferential review used before a reliable computational feedback sensor exists
 - custom tooling before basic local validation works
 
-Implementation brief format: preferred option, why this moves the needle, alternatives considered, files and commands likely to change, verification plan, do-not-build-yet items, and open alignment questions.
+Each prioritized recommendation must be detailed enough to hand off directly to `implement-with-alignment`.
 
 ## Output Shape
 
-Use [REPORT-FORMAT.md](REPORT-FORMAT.md). The report must show every harness-map dimension before narrowing to a prioritized implementation brief.
+Use [REPORT-FORMAT.md](REPORT-FORMAT.md). The report must show every harness-map dimension before ranking implementation-ready recommendations.
