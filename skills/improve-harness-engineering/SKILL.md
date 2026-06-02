@@ -34,11 +34,13 @@ Discover exact commands from real repo evidence: package files, Makefiles, task 
 
 Run the fastest representative checks where feasible. Inspect failures. Distinguish "harness exists on paper" from "harness works in this checkout". If a check is slow, flaky, expensive, credential-gated, or destructive, skip it and record why.
 
+Read agent instruction surfaces such as `AGENTS.md`, runtime skills, repo docs, and human-facing architecture docs. Evaluate whether each instruction belongs where it is: global agent rule, path-specific agent rule, reusable skill, human/agent readable doc, executable script, or feedback sensor. Apply [AGENTS-QUALITY.md](AGENTS-QUALITY.md).
+
 ## Harness Map
 
 Evaluate four audit dimensions:
 
-- **Feedforward guides**: what steers the agent before it acts?
+- **Feedforward guides**: what steers the agent before it acts, and is each instruction in the right artifact?
 - **Feedback sensors**: what lets the agent self-correct after it acts?
 - **Human workflow**: where do people steer, approve, review, or own judgment?
 - **Harnessability**: what codebase or environment properties make agent work easier or harder?
@@ -51,21 +53,25 @@ For each serious finding, tag the audit dimension, control type (`computational`
 
 Prefer cheap, reliable computational controls. Use inferential controls for semantic judgment, prioritization, and gaps deterministic tools cannot cover.
 
+## Delegated Audit
+
+Delegated audit is the core workflow. After topology is reconstructed, delegate focused audits for every dimension: feedforward guides and `AGENTS.md` placement, feedback sensors, human workflow, and harnessability/navigation.
+
+The main agent owns final judgment. It traces the highest-risk path itself, validates subagent findings against files/commands/docs/runtime behavior, and rejects duplicated, speculative, unactionable, or weakly evidenced findings.
+
+Do not produce an implementation brief until every audit dimension has current state, issues found, candidate improvements, a preferred recommendation, and do-not-build-yet items.
+
 ## Behavior Harness Standard
 
 Flag weak behavior confidence when tests mostly mirror the implementation, over-mock the boundary, rely on manual review, or lack an independent expected result such as a spec, fixture, golden file, contract, e2e path, user example, seeded data, or runtime signal.
 
+## Navigation And Architecture
+
+Evaluate whether an agent can quickly understand where concepts live, where changes belong, and how to verify them. Flag architecture friction when the repo has unclear maps, ownership, or entry points; one concept spread across shallow modules; mechanism-first names instead of domain language; stale or missing architecture docs/ADRs; tests that cannot exercise caller-facing interfaces; or runtime state, logs, fixtures, and dev servers that are hard to inspect.
+
 ## Prioritization Rubric
 
-Prioritize improvements by expected harness leverage.
-
-Prefer recommendations that:
-
-- catch or prevent repeated agent failures
-- are supported by concrete repo evidence
-- are cheap to run and available early in the workflow
-- have high confidence and low false-positive risk
-- are simpler to maintain than the alternatives
+Prioritize improvements by expected harness leverage. Prefer recommendations that catch repeated agent failures, have concrete repo evidence, run early and cheaply, carry low false-positive risk, and are simpler to maintain than alternatives.
 
 Group recommendations by audit dimension. Within each group, identify the preferred recommendation and explain why it beats alternatives on leverage, confidence, effort, time-to-feedback, and maintenance cost.
 
@@ -78,6 +84,7 @@ When alignment is unclear, interview relentlessly one question at a time. Make a
 Challenge anti-patterns:
 
 - vague `AGENTS.md` rules where a script or check would work
+- durable instructions trapped in chat, PR comments, or the wrong doc
 - contradictory feedforward guides and feedback sensors
 - command docs that do not match runnable checks
 - repeated agent failures with no feedforward guide or feedback sensor
@@ -89,4 +96,4 @@ Implementation brief format: preferred option, why this moves the needle, altern
 
 ## Output Shape
 
-Report: repo topology, current harness map, findings by audit dimension, preferred recommendations, do not build yet, and alignment questions.
+Use [REPORT-FORMAT.md](REPORT-FORMAT.md). The report must show every harness-map dimension before narrowing to a prioritized implementation brief.

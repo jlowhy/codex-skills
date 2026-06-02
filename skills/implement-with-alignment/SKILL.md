@@ -19,8 +19,13 @@ If scope changes materially after approval, stop and get approval for the new sc
 
 Inspect the relevant local code and commands before proposing implementation.
 
+If the brief references a ticket, PR, issue, review thread, spec, design doc, commit, branch, or URL, inspect every accessible referenced artifact before proposing a plan. Include source details that could affect scope: acceptance criteria, comments, diffs, unresolved threads, checks, linked issues, and status. If something is inaccessible, say what could not be read and whether that blocks confident alignment.
+
+Assess whether the human instructions are complete enough to execute. Humans often omit key constraints, acceptance criteria, edge cases, rollout details, or verification expectations. Fill obvious gaps from source context; raise missing facts that could change scope, correctness, or risk.
+
 Present the brief in this shape:
 
+- **Source context reviewed**: local code, commands, tickets, PRs, docs, comments, or other artifacts inspected
 - **Preferred option**: the smallest coherent batch worth doing now
 - **Why this**: leverage, confidence, effort, time-to-feedback, and maintenance cost
 - **Alternatives**: what was considered and why it is not preferred
@@ -45,7 +50,7 @@ If verification exposes issues within the approved plan, fix and rerun. If it ex
 
 Run the agreed checks. Record skipped checks with concrete reasons.
 
-After the implementation verifies, run `codex-review` against the completed work. Address accepted findings and rerun relevant validation. When review findings are settled, run `post-implementation-cleanup` for behavior-preserving cleanup before publication.
+After the implementation verifies, run `codex-review` against the completed work. Address accepted findings and rerun relevant validation. When review findings are settled, run `post-implementation-cleanup-loop` for behavior-preserving cleanup before publication.
 
 If the repo uses git, commit the approved implementation when requested or when the agreed workflow includes publication. If the user wants a PR, hand off to the repo's PR-authoring workflow or skill instead of prescribing PR format here.
 
