@@ -1,70 +1,29 @@
 ---
 name: writing-grill
-description: Grilling session that develops the narrative structure, essence, reader, tension, turn, and payoff of an article, essay, social post, thread, announcement, memo, or other written piece. Use when the user wants idea development, narrative structure, draft diagnosis, post/article shape, or help making writing engaging before cleanup or polish.
+description: Critique-heavy writing process that develops and sharpens writing from no starting point, rough ideas, raw notes, or a draft into a clear, forceful piece. Use when the user wants to think deeply about what they are writing, who they are addressing, what they want to convince or cause, attack a thesis, pressure-test structure, diagnose a draft, sharpen prose, or make writing engaging.
 ---
 
 # Writing Grill
 
-Use this for live writing development, not copyediting. The goal is to make the piece worth reading by finding the narrative structure before cleanup or polish.
+Use this for live writing development and sharpening. The goal is to make the piece worth reading by understanding the writing goal, reader, narrative spine, point-form argument map, section substance, and final expression.
 
 Interview the user relentlessly until the writing has a sharp point of view, a real reader, structural tension, and a satisfying turn. Ask one question at a time and wait for feedback before continuing.
 
-If the user provides a draft, outline, notes, title, screenshots, or source material, inspect that material before asking. If the answer is already present, state the inference and ask the next unresolved question.
+Play devil's advocate throughout. Attack the thesis, reader assumption, evidence, structure, and style target before helping flesh the piece out.
+
+Load `INTERVIEW-GUIDE.md`. Inspect supplied drafts, source material, research bases, and style references before asking. Distinguish sourced facts, inferred framing, and style observations.
 
 ## Core Standard
 
-Every piece of writing must have a narrative spine:
+Every piece of writing must have a narrative spine: **Situation** (where the reader starts), **Tension** (the contradiction, cost, desire, or unanswered question that creates motion), **Turn** (what changes in understanding), and **Payoff** (what the reader sees, feels, decides, or can say differently after reading).
 
-- **Situation**: what world, moment, or belief the reader starts in
-- **Tension**: what contradiction, mistake, cost, desire, or unanswered question makes the piece move
-- **Turn**: what changes in the writer's or reader's understanding
-- **Payoff**: what the reader sees, feels, decides, or can say differently after reading
-
-Friction belongs in the spine. It is the underlying pressure that makes the piece worth continuing, not something to inject every few sentences.
-
-If any part of the spine is missing, grill there before discussing line edits, voice, sentence rhythm, or polish.
+Friction belongs in the spine, not injected every few sentences. If any part of the spine is missing, grill there before sharpening expression.
 
 ## Session Flow
 
-Start by identifying the format and reader:
+Work through the guide stages: intake, orientation, reference calibration, point-form argument map, pressure test, section-by-section flesh, and sharpening grill. Do not move to the next stage until the current one has a coherent answer.
 
-- article, essay, social post, thread, launch post, memo, speech, email, or other form
-- intended reader and what they already believe
-- desired effect: persuade, clarify, provoke, teach, announce, recruit, reflect, or entertain
-
-Then walk the narrative tree in this order:
-
-1. **Essence**: What is the one sentence the piece exists to make true?
-2. **Reader**: Who needs this, and what are they likely wrong about or missing?
-3. **Stakes**: What happens if the reader keeps believing the old version?
-4. **Tension**: What pressure, contradiction, or unresolved question creates momentum?
-5. **Evidence**: What concrete story, example, data, scene, or observation earns the claim?
-6. **Turn**: Where does the piece become more interesting than the reader expected?
-7. **Structure**: What sequence makes the reader keep going?
-8. **Ending**: What final thought should linger after the last line?
-
-For each question, provide a recommended answer when useful. Do not ask for information the draft already implies; instead, quote or paraphrase the evidence and challenge whether that is the intended direction.
-
-## Challenge Rules
-
-- If the idea is generic, ask for the specific lived observation, scene, example, or conflict that makes it non-generic.
-- If the piece is just advice, force the story or contradiction behind the advice.
-- If the piece is only a story, force the claim the story earns.
-- If friction appears in every paragraph, consolidate it into one clear structural tension.
-- If the audience is broad, narrow it to the reader whose mind can realistically change.
-- If the structure is a list, force a narrative progression rather than parallel points.
-- If the ending repeats the opening, push for a turn, implication, or unresolved resonance.
-
-## Narrative Shapes
-
-Use a shape only when it fits the material:
-
-- **Before / After**: old belief, costly friction, new lens, changed behavior
-- **Mystery / Reveal**: puzzling observation, failed explanations, sharper explanation, implication
-- **Mistake / Correction**: common error, why smart people make it, better frame, practical consequence
-- **Scene / Meaning**: concrete moment, hidden pattern, broader claim, reader takeaway
-- **Contrarian / Earned**: accepted belief, uncomfortable exception, proof, revised belief
-- **Journey / Lesson**: attempt, obstacle, discovery, principle, changed action
+For each unresolved decision, recommend the best answer, explain why, and name the tradeoff. Do not ask for information the draft or sources already imply; instead, quote or paraphrase the evidence and challenge whether that is the intended direction.
 
 ## Output Modes
 
@@ -74,8 +33,13 @@ If the user asks for a full pass, produce:
 - the proposed narrative spine
 - the strongest structure
 - the weakest structural gap
+- the strongest objection
 - the next concrete development move
 
-If the user asks to rewrite or clean up sentences, use `writing-sharpen` after the narrative structure is clear.
+If the user asks to build the piece interactively, keep a visible working state:
 
-Do not default to line edits. This skill is for narrative structure.
+- **Goal**: the intended reader change
+- **Argument Map**: the current point-form section or beat sequence
+- **Now**: the one section or decision being worked on
+
+If the user asks to rewrite or clean up sentences before the structure is clear, grill the structure first. If the structure is clear, use the sharpening grill.

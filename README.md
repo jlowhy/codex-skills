@@ -12,8 +12,7 @@ ${CODEX_HOME:-$HOME/.codex}/skills
 
 - `implement-with-alignment`: normalize an implementation brief, align it, then execute, verify, and prepare the completed change for publication.
 - `youtube-transcript-capture`: capture YouTube metadata and transcript-derived notes into the notes vault.
-- `writing-grill`: grill a piece of writing until its essence, narrative structure, tension, and payoff are clear.
-- `writing-sharpen`: clean up existing writing by cutting AI-ish scaffolding, filler, and vague synthesis.
+- `writing-grill`: critique, develop, and sharpen writing from nothing, notes, or drafts into a clear, forceful piece.
 
 ## Install
 
@@ -23,7 +22,6 @@ Install selected skills as symlinks:
 ./install.sh implement-with-alignment
 ./install.sh youtube-transcript-capture
 ./install.sh writing-grill
-./install.sh writing-sharpen
 ```
 
 By default, existing installed skill folders are replaced with symlinks to this repository. A timestamped backup is created under:
@@ -36,7 +34,8 @@ ${CODEX_HOME:-$HOME/.codex}/skills/.backup/
 
 ```text
 skills/<skill-name>/SKILL.md
+skills/<skill-name>/<reference>.md
 install.sh
 ```
 
-Each folder under `skills/` is an installable Codex skill.
+Each folder under `skills/` is an installable Codex skill. Some skills include one-level reference files loaded from `SKILL.md`.
