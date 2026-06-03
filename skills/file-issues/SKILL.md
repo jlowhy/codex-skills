@@ -56,6 +56,8 @@ If the research changes the right action, pause before mutating the tracker. Rec
 
 Create one issue per independently grabbable unit of work unless the user explicitly asks for one umbrella issue or the issues share the same fix and acceptance criteria.
 
+When source material maps to existing tracked work, reconcile each source finding as: already covered, update existing issue, create new issue, defer, or skip. Update existing issues when new context changes handoff quality.
+
 Classify each issue as **Ready** only when expected behavior, current behavior, scope, acceptance criteria, and verification are clear, and the expected behavior is settled. Use **Needs shaping** when product or design decisions, workflow policy, runtime parity, validation cost tradeoffs, defaults, ownership, repro, or acceptance criteria are missing, or where reasonable teams could choose different outcomes. Use **Investigation** when the symptom is real but root cause or fix path is unknown.
 
 For **Needs shaping** issues, capture the decision needed, options, tradeoffs, evidence needed, open questions, and acceptance criteria for settling the decision. Do not invent certainty or convert unresolved decisions into implementation tasks. If details are incomplete, capture the unknowns explicitly and assign a suitable status, label, section, or first task for triage.
@@ -85,7 +87,7 @@ Prefer the tracker's native fields for team, project, component, labels, status,
 4. Use the tracker tool/API when available. For Linear, use the Linear MCP tools. For Jira or other systems, use the available authenticated tool, CLI, or browser session.
 5. If no creation tool is available, provide complete tracker-ready issue bodies and state exactly what blocked creation.
 6. After creation or update, read back or verify the affected records when possible.
-7. Report the created or updated issue identifiers/URLs, duplicate decisions, related links, missing organization, and any unresolved handoff risks.
+7. Report created/updated issues, source-finding coverage decisions, duplicate decisions, related links, and unresolved handoff risks.
 
 ## Quality Bar
 

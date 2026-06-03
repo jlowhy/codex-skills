@@ -57,6 +57,8 @@ For every prioritized recommendation, include:
 - **Risks and alignment questions**: decisions that must be settled before implementation
 - **Do not build yet**: tempting adjacent controls to defer and why
 
+Treat every prioritized recommendation with the same evidence and explanation standard. If space is tight, use compact fields while preserving finding, actual behavior, expected behavior, why it matters, evidence, special treatment or decision classification when relevant, and proof plan for each recommendation.
+
 For validation or command-routing recommendations, apply [SKIPPED-CHECK-TREATMENT.md](SKIPPED-CHECK-TREATMENT.md) and include:
 
 - repro command
