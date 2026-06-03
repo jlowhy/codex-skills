@@ -57,7 +57,15 @@ For every prioritized recommendation, include:
 - **Risks and alignment questions**: decisions that must be settled before implementation
 - **Do not build yet**: tempting adjacent controls to defer and why
 
-For validation or command-routing recommendations, include the repro command, actual planned command or observed behavior, expected command or behavior, and the exact reason the current command does not cover the changed surface.
+For validation or command-routing recommendations, apply [SKIPPED-CHECK-TREATMENT.md](SKIPPED-CHECK-TREATMENT.md) and include:
+
+- repro command
+- actual planned command or observed behavior
+- expected command or behavior
+- why the current command does not cover the changed surface
+- skipped check classification
+- recommended treatment: `run`, `warn`, `document`, or `ignore`
+- cost/risk/false-confidence tradeoff
 
 For instruction-surface recommendations, also include what stays in `AGENTS.md`, what moves out, destination artifact, content classification, expected always-on token impact when relevant, and acceptance criteria.
 

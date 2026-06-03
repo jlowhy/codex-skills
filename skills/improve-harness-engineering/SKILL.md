@@ -9,7 +9,7 @@ Use this as a diagnosis and recommendation skill.
 
 A codebase harness is the outer system of feedforward guides, feedback sensors, workflows, and codebase properties that helps coding agents get work right, self-correct quickly, and leave the right decisions to humans.
 
-Apply [EVIDENCE-STANDARD.md](EVIDENCE-STANDARD.md) and [DELEGATED-AUDIT.md](DELEGATED-AUDIT.md) to every audit.
+Apply [EVIDENCE-STANDARD.md](EVIDENCE-STANDARD.md) and [DELEGATED-AUDIT.md](DELEGATED-AUDIT.md) to every audit. Use [SKIPPED-CHECK-TREATMENT.md](SKIPPED-CHECK-TREATMENT.md) for validation-routing or feedback-sensor gaps.
 
 ## Definitions
 
@@ -62,6 +62,7 @@ Delegated audit is the core workflow. Apply [DELEGATED-AUDIT.md](DELEGATED-AUDIT
 - **Behavior**: flag weak confidence when tests mirror implementation, over-mock boundaries, rely on manual review, or lack an independent expected result.
 - **Navigation and architecture**: flag friction when agents cannot quickly find concepts, ownership, entrypoints, intended layers, caller-facing test interfaces, or inspectable runtime state.
 - **Operating model**: evaluate bootstrap/startup reachability, root command surface, workspace boundaries, graph-aware task execution, CI/local alignment, and validation reachability. Flag false confidence from docs drift, warmed local state, ignored files, partial task success, or package-local commands that bypass the repo-owned path.
+- **Skipped check treatment**: for relevant checks that are not run, classify whether to run, warn, document, or ignore.
 
 ## Prioritization Rubric
 
