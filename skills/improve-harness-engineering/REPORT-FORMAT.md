@@ -67,6 +67,8 @@ For validation or command-routing recommendations, apply [SKIPPED-CHECK-TREATMEN
 - recommended treatment: `run`, `warn`, `document`, or `ignore`
 - cost/risk/false-confidence tradeoff
 
+For operating-model decision recommendations, apply [OPERATING-MODEL-DECISIONS.md](OPERATING-MODEL-DECISIONS.md).
+
 For instruction-surface recommendations, also include what stays in `AGENTS.md`, what moves out, destination artifact, content classification, expected always-on token impact when relevant, and acceptance criteria.
 
 When instruction-surface refactoring is a prioritized recommendation, make it implementation-ready: quote only the current headings or bullets being changed, classify each change as remove/rewrite/relocate/add, name the destination file and section for relocated content, and specify the resulting `AGENTS.md` / skills / docs / scripts structure.

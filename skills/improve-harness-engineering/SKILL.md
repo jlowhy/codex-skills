@@ -9,7 +9,8 @@ Use this as a diagnosis and recommendation skill.
 
 A codebase harness is the outer system of feedforward guides, feedback sensors, workflows, and codebase properties that helps coding agents get work right, self-correct quickly, and leave the right decisions to humans.
 
-Apply [EVIDENCE-STANDARD.md](EVIDENCE-STANDARD.md) and [DELEGATED-AUDIT.md](DELEGATED-AUDIT.md) to every audit. Use [SKIPPED-CHECK-TREATMENT.md](SKIPPED-CHECK-TREATMENT.md) for validation-routing or feedback-sensor gaps.
+Apply [EVIDENCE-STANDARD.md](EVIDENCE-STANDARD.md) and [DELEGATED-AUDIT.md](DELEGATED-AUDIT.md) to every audit.
+Use [SKIPPED-CHECK-TREATMENT.md](SKIPPED-CHECK-TREATMENT.md) for validation-routing or feedback-sensor gaps, and [OPERATING-MODEL-DECISIONS.md](OPERATING-MODEL-DECISIONS.md) for recommendations that affect workflow, runtime shape, validation cost, CI behavior, ownership, or default agent behavior.
 
 ## Definitions
 

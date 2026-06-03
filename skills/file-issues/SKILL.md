@@ -56,9 +56,9 @@ If the research changes the right action, pause before mutating the tracker. Rec
 
 Create one issue per independently grabbable unit of work unless the user explicitly asks for one umbrella issue or the issues share the same fix and acceptance criteria.
 
-Classify each issue as **Ready** when expected behavior, current behavior, scope, acceptance criteria, and verification are clear; **Needs shaping** when product decisions, design, repro, ownership, or acceptance criteria are missing; or **Investigation** when the symptom is real but root cause or fix path is unknown.
+Classify each issue as **Ready** only when expected behavior, current behavior, scope, acceptance criteria, and verification are clear, and the expected behavior is settled. Use **Needs shaping** when product or design decisions, workflow policy, runtime parity, validation cost tradeoffs, defaults, ownership, repro, or acceptance criteria are missing, or where reasonable teams could choose different outcomes. Use **Investigation** when the symptom is real but root cause or fix path is unknown.
 
-Do not invent certainty. If details are incomplete, capture the unknowns explicitly and assign a suitable status, label, section, or first task for triage.
+For **Needs shaping** issues, capture the decision needed, options, tradeoffs, evidence needed, open questions, and acceptance criteria for settling the decision. Do not invent certainty or convert unresolved decisions into implementation tasks. If details are incomplete, capture the unknowns explicitly and assign a suitable status, label, section, or first task for triage.
 
 ## Issue Content Standard
 
