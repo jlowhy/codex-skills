@@ -22,7 +22,7 @@ Apply [EVIDENCE-STANDARD.md](EVIDENCE-STANDARD.md) and [DELEGATED-AUDIT.md](DELE
 
 ## Boundary
 
-Do not edit files, commit, push, or open a PR. Read files and run non-mutating commands only. If the user wants to implement an audit recommendation, hand off to `implement-with-alignment` using the chosen prioritized recommendation.
+Do not edit files, commit, push, or open a PR. Read files and run non-mutating commands only.
 
 ## Audit Flow
 
@@ -87,8 +87,6 @@ Challenge anti-patterns:
 - behavior claims backed only by newly generated tests
 - inferential review used before a reliable computational feedback sensor exists
 - custom tooling before basic local validation works
-
-Each prioritized recommendation must be detailed enough to hand off directly to `implement-with-alignment`.
 
 ## Output Shape
 

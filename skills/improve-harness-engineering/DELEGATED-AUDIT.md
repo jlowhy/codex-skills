@@ -25,7 +25,7 @@ Check:
 - is confidence justified by coverage and evidence?
 - are the findings detailed enough to explain how the current system works?
 - does each important finding include a concrete example, actual behavior, expected behavior, and why it matters?
-- are recommendations detailed enough to support prioritization and implementation alignment?
+- are recommendations detailed enough to support prioritization and action?
 
 If the response is insufficient, either delegate a follow-up audit with a narrower question, or mark the missing coverage as `[not covered]`, downgrade confidence, and reduce or remove implementation-ready claims.
 
