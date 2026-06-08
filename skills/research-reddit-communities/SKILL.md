@@ -30,6 +30,19 @@ Capture:
 
 Default the selection goal to learning quality plus low reputational risk over reach or immediate conversion.
 
+## Expectation Alignment
+
+Before discovery, grill the user until the selection criteria are explicit. Ask one question at a time, recommend an answer, and wait for feedback when the answer could change the research direction.
+
+Resolve:
+- what "suitable" means for this research
+- whether learning quality, posting acceptability, reach, conversion, or reputation risk matters most
+- what community behaviors are disqualifying
+- whether the first move should be a comment, a weekly-thread post, a direct post, or observation only
+- what outcome would make the first community worth continuing
+
+If the user has not decided, recommend learning quality plus low reputational risk as the primary criterion, with promotion acceptability as a gate rather than the main objective.
+
 ## Discovery Workflow
 
 1. Build a seed map from native Reddit search, web search scoped to Reddit, related subreddit sidebars, competitor/tool mentions, and user-pain phrases.

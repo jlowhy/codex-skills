@@ -44,6 +44,10 @@ _Avoid_: skill reference file, reusable template
 A skill slug that starts with the action the agent should perform.
 _Avoid_: noun label
 
+**Expectation alignment**:
+A pre-research grilling step that resolves what matters, what does not matter, and what tradeoffs the recommendation should make.
+_Avoid_: preference capture, loose intake
+
 ## Relationships
 
 - **Agent-led community research** uses one or more **Investigation aids**.
@@ -55,6 +59,7 @@ _Avoid_: noun label
 - A **Research template** structures evidence capture during **Agent-led community research**.
 - A **Research artifact** belongs in the project or notes location for the specific research session, not in the skill repository.
 - An **Action-style skill name** should make the agent's main job explicit at trigger time.
+- **Expectation alignment** happens before discovery so the agent does not optimize for the wrong definition of suitability.
 
 ## Example Dialogue
 
@@ -69,3 +74,4 @@ _Avoid_: noun label
 - "score" was considered for helper output, but resolved against for this skill: helpers should expose **Light signals**, while the agent owns suitability judgment.
 - Reddit API access was considered as the default entrypoint, but resolved against: the skill should use **Manual-first research** and treat API helpers as optional accelerators.
 - "reddit-community-research" was considered as a noun label; resolved: use the **Action-style skill name** `research-reddit-communities`.
+- "what matters" should not stay implicit in the research brief; resolved: use **Expectation alignment** to grill the selection criteria before discovery.

@@ -11,6 +11,16 @@
 - Exclusions:
 - Artifact date:
 
+## Expectation Alignment
+
+- Primary criterion:
+- Secondary criteria:
+- Disqualifiers:
+- Promotion posture requirement:
+- Preferred first move:
+- Continuation threshold:
+- Tradeoffs accepted:
+
 ## Candidate Map
 
 | Community | Why considered | Evidence checked | Initial disposition |
