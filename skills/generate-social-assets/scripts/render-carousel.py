@@ -18,15 +18,30 @@ def esc(value: object) -> str:
     return html.escape(str(value or ""), quote=True)
 
 
+def rich_text(value: object) -> str:
+    return esc(value).replace("\n", "<br />")
+
+
 def slide_markup(slide: dict, index: int, total: int, deck: dict) -> str:
     kind = esc(slide.get("kind") or "point")
-    eyebrow = (
-        f'<div class="eyebrow">{esc(slide.get("eyebrow"))}</div>'
-        if slide.get("eyebrow")
-        else ""
-    )
+    hide_top = bool(deck.get("hide_top"))
+    top = ""
+    if deck.get("top") == "brand":
+        logo = (
+            f'<img src="{esc(deck.get("logo_src"))}" alt="" />'
+            if deck.get("logo_src")
+            else ""
+        )
+        top = f'<div class="top brand-top">{logo}<span>{esc(deck.get("brand") or "")}</span></div>'
+    elif not hide_top:
+        eyebrow = (
+            f'<div class="eyebrow">{esc(slide.get("eyebrow"))}</div>'
+            if slide.get("eyebrow")
+            else ""
+        )
+        top = f'<div class="top">{eyebrow}<div class="count">{index + 1}/{total}</div></div>'
     title = f"<h1>{esc(slide.get('title'))}</h1>" if slide.get("title") else ""
-    body = f"<p>{esc(slide.get('body'))}</p>" if slide.get("body") else ""
+    body = f"<p>{rich_text(slide.get('body'))}</p>" if slide.get("body") else ""
     bullets = ""
     if isinstance(slide.get("bullets"), list):
         items = "".join(f"<li>{esc(item)}</li>" for item in slide["bullets"])
@@ -34,7 +49,7 @@ def slide_markup(slide: dict, index: int, total: int, deck: dict) -> str:
     footer = esc(slide.get("footer") or deck.get("author") or "")
     return f"""
     <section class="slide {kind}" data-slide>
-      <div class="top">{eyebrow}<div class="count">{index + 1}/{total}</div></div>
+      {top}
       <main>{title}{body}{bullets}</main>
       <footer>{footer}</footer>
     </section>
@@ -80,7 +95,7 @@ def build_html(deck: dict) -> str:
       background: linear-gradient(180deg, rgba(15, 118, 110, 0.08), transparent 34%), var(--paper);
       border: 1px solid var(--line);
       display: grid;
-      grid-template-rows: auto 1fr auto;
+      grid-template-rows: {"1fr auto" if deck.get("hide_top") and deck.get("top") != "brand" else "auto 1fr auto"};
       overflow: hidden;
     }}
     .top {{
@@ -91,6 +106,17 @@ def build_html(deck: dict) -> str:
       color: var(--muted);
       font-size: 28px;
       font-weight: 650;
+    }}
+    .brand-top {{
+      justify-content: flex-start;
+      gap: 16px;
+      color: #063f33;
+      font-size: 30px;
+    }}
+    .brand-top img {{
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
     }}
     .eyebrow {{
       color: var(--accent);
@@ -174,6 +200,9 @@ def main() -> None:
     slides_dir.mkdir(parents=True, exist_ok=True)
 
     deck = json.loads(input_path.read_text(encoding="utf-8"))
+    if deck.get("logo_path"):
+        logo_path = (input_path.parent / str(deck["logo_path"])).resolve()
+        deck["logo_src"] = logo_path.as_uri()
     slides = deck.get("slides")
     if not isinstance(slides, list) or not slides:
         raise SystemExit("slides.json must include a non-empty slides array")
