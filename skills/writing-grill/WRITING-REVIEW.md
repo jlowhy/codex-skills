@@ -13,6 +13,8 @@ Use this when `writing-grill` has actual prose to inspect. Review the writing as
 
 Do not line-edit before structure is clear. If the problem is sentence economy, rhythm, polish, or AI-ish wording after the structure is clear, move to the sharpening grill.
 
+If structure is clear but the style target is uncertain, use the virtual panel from `INTERVIEW-GUIDE.md` to generate distinct directions before rewriting. Do not present one prose answer as objectively correct when the real decision is taste.
+
 ## What To Attack
 
 - **Buried claim**: the real point arrives too late or never becomes explicit.
@@ -33,6 +35,6 @@ Treat these as expression problems: the underlying idea may be fine, but the phr
 - **Throat-clearing**: "In today's world", "The reality is", "At its core", "The key is", or "What matters is".
 - **Fake universality**: "teams are realizing", "companies are starting to", or "everyone is moving toward" without evidence.
 
-When one appears, name the expression problem, explain how it weakens clarity, force, or trust, and clean it up immediately if the fix is local and does not change meaning. Use the sharpening grill when the passage needs broader sentence-level cleanup.
+When one appears, name the expression problem, explain how it weakens clarity, force, or trust, and clean it up immediately if the fix is local and does not change meaning. Use the sharpening grill when the passage needs broader sentence-level cleanup or competing style directions.
 
 For each issue, explain why it weakens the piece and recommend one fix. Keep structural fixes at the claim, evidence, section, or paragraph-order level; apply obvious expression fixes directly.

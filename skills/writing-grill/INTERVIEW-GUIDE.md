@@ -1,6 +1,6 @@
 # Interview Guide
 
-Use this guide to run the grill as a staged conversation. Ask one question at a time, keep the whole stage in mind, and treat critique plus recommendation as working methods. For every unresolved decision, recommend an answer, explain why it serves the reader, goal, evidence, length, and style target, and name the tradeoff.
+Use this guide to run the grill as a staged conversation. Ask one question at a time, keep the whole stage in mind, and treat critique plus recommendation as working methods. For structural decisions, recommend an answer, explain why it serves the reader, goal, evidence, length, and style target, and name the tradeoff. For prose-level taste decisions, show meaningfully different directions before recommending one.
 
 ## 1. Intake
 
@@ -37,7 +37,29 @@ Use references for evidence, argument grounding, and style calibration: facts, e
 
 Validate which claims are sourced, inferred, or speculative; which sections need more research; which style traits are useful instead of surface mimicry; and whether the length fits the evidence and expected density.
 
-## 4. Point-Form Argument Map
+If the user asks for style sharpening, voice matching, wordsmithing, tone options, or examples of possible directions, load `STYLE-REFERENCES.md`, open `~/Notes/Notes/Writing References - Jonathan Voice.md`, and use 2-4 linked samples as the voice anchor. Let the venue shape length, density, and call-to-action, but do not skip Jonathan's voice anchor because the channel differs. Use Jonathan's own published or drafted writing as the source of truth for voice, taste, and style direction.
+
+## 4. Virtual Panel
+
+Use the panel to create useful disagreement. Select only the lenses that matter for the current stage; 2-3 is usually enough.
+
+- **Strategist**: What is the crux? What vague language is hiding weak thinking? What diagnosis makes the rest obvious?
+- **Operator**: Is the idea practical, simple, memorable, and easy to apply?
+- **Truth-Teller**: Is the point emotionally honest, or too polite, evasive, or generic?
+- **Contrarian**: Can this be shorter, sharper, more opinionated, and less consensus-shaped?
+- **Scholar**: Is the reasoning disciplined, defensible, and conceptually precise?
+- **Evangelist**: Is the central belief simple enough to repeat and rally around?
+
+Use the panel differently by stage:
+
+1. **Diagnosis**: attack the thesis, reader, real problem, evidence, and hidden assumptions.
+2. **Structure**: test whether the sequence creates motion instead of listing points.
+3. **Critique**: expose different failure modes without turning every panelist into a paragraph.
+4. **Style Lab**: generate distinct prose directions by intent, not tiny wording variants.
+
+Default to Strategist as the lead critic when the piece lacks diagnosis, crux, or strategic force. Treat the panel as editorial hats, not author references.
+
+## 5. Point-Form Argument Map
 
 Turn the orientation into a complete point-form map before drafting prose:
 
@@ -51,7 +73,7 @@ If the sequence is a flat list, force progression. Each section should change wh
 
 Stay in point form until the whole map is coherent and the user agrees to write prose. If the user starts drafting too early, pause and return to the map.
 
-## 5. Pressure Test
+## 6. Pressure Test
 
 Before fleshing out the piece, attack the current point-form map:
 
@@ -70,7 +92,7 @@ For each objection, decide whether to fix the plan, gather more evidence, narrow
 - If the ending repeats the opening, push for a turn, implication, or unresolved resonance.
 - If the claim survives only because it is vague, force a sharper claim that can be attacked.
 
-## 6. Flesh
+## 7. Flesh
 
 After the argument map makes sense, develop content one section at a time:
 
@@ -82,13 +104,13 @@ After the argument map makes sense, develop content one section at a time:
 
 Do not write the entire piece in one pass unless the user explicitly asks. If prose exposes a structural or evidence problem, return to the argument map or reference calibration.
 
-## 7. Sharpening Grill
+## 8. Sharpening Grill
 
 After structure and substance are clear, sharpen the prose by grilling it:
 
 1. Identify the passage's job, reader, intended effect, core claim, and constraints to preserve.
 2. Attack weak expression: filler, vague synthesis, throat-clearing, over-polish, generic elevation, awkward sequence, and lost cadence.
-3. Apply the smallest rewrite that improves force, clarity, specificity, sequence, or sentence economy without changing meaning.
-4. Explain what changed, what was cut, and the tradeoff.
+3. If the fix is local and the style target is clear, apply the smallest rewrite that improves force, clarity, specificity, sequence, or sentence economy without changing meaning.
+4. If the rewrite is substantial or the taste target is unclear, produce 3-5 distinct versions by intent. Name each direction, explain the tradeoff, recommend one, and ask which direction to tighten.
 5. Preserve useful imperfection, strong specificity, personal judgment, and technical precision.
-For substantial rewrites, produce distinct versions by intent, not tiny wording variants, then recommend one and explain why.
+6. After the user chooses a direction, tighten inside that direction instead of averaging the variants into generic prose.
