@@ -11,6 +11,7 @@ ${CODEX_HOME:-$HOME/.codex}/skills
 ## Skills
 
 - `implement-with-alignment`: normalize an implementation brief, align it, then execute, verify, and prepare the completed change for publication.
+- `generate-social-assets`: generate local social assets from notes, drafts, articles, transcripts, or briefs, starting with LinkedIn carousel PDFs.
 - `research-reddit-communities`: research and compare Reddit communities through agent-led discovery, then recommend one first community for credible participation.
 - `youtube-transcript-capture`: capture YouTube metadata and transcript-derived notes into the notes vault.
 - `writing-grill`: critique, develop, and sharpen writing from nothing, notes, or drafts into a clear, forceful piece.
@@ -21,6 +22,7 @@ Install selected skills as symlinks:
 
 ```bash
 ./install.sh implement-with-alignment
+./install.sh generate-social-assets
 ./install.sh research-reddit-communities
 ./install.sh youtube-transcript-capture
 ./install.sh writing-grill
@@ -52,6 +54,15 @@ Each folder under `skills/` is an installable Codex skill. Some skills include o
 - `scripts/inspect_with_praw.py`: optional read-only Reddit API helper for bounded subreddit metadata/rules/post sampling when official credentials are available.
 
 The Reddit skill is manual-first. API helpers accelerate inspection when available, but they are not required and do not produce final suitability scores or rankings.
+
+## Asset Helpers
+
+`generate-social-assets` includes:
+
+- `scripts/create-carousel-brief.py`: creates a starter `slides.json` for a LinkedIn carousel.
+- `scripts/render-carousel.py`: renders `slides.json` to a local HTML preview, PNG slides, and `carousel.pdf` using Playwright and ReportLab.
+
+The asset skill is local-first. It creates reviewable files for manual upload and does not automate publishing.
 
 ## Context
 

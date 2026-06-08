@@ -48,6 +48,22 @@ _Avoid_: noun label
 A pre-research grilling step that resolves what matters, what does not matter, and what tradeoffs the recommendation should make.
 _Avoid_: preference capture, loose intake
 
+**Asset brief**:
+A short run-specific definition of the audience, intended reader change, channel, format, source links, claim risk, and call to action for a social asset.
+_Avoid_: generic prompt, content request
+
+**Storyboard**:
+The ordered slide or scene sequence that converts source material into a scannable social asset before rendering.
+_Avoid_: final design, transcript dump
+
+**Local renderer**:
+A deterministic script that turns structured asset input into local preview/export files without publishing them.
+_Avoid_: social media automation, scheduling agent
+
+**Export bundle**:
+The local files produced for review or manual upload, such as HTML preview, PNG slides, PDF carousel, or MP4.
+_Avoid_: published post, campaign
+
 ## Relationships
 
 - **Agent-led community research** uses one or more **Investigation aids**.
@@ -60,6 +76,9 @@ _Avoid_: preference capture, loose intake
 - A **Research artifact** belongs in the project or notes location for the specific research session, not in the skill repository.
 - An **Action-style skill name** should make the agent's main job explicit at trigger time.
 - **Expectation alignment** happens before discovery so the agent does not optimize for the wrong definition of suitability.
+- An **Asset brief** configures a **Storyboard** for one source and channel.
+- A **Local renderer** turns a **Storyboard** into an **Export bundle**.
+- An **Export bundle** is reviewed manually before any publishing workflow is considered.
 
 ## Example Dialogue
 
