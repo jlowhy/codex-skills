@@ -1,6 +1,6 @@
 # Codex Skills
 
-Personal Codex skills for writing, research, transcript, and implementation workflows.
+Personal Codex skills for writing, research, transcript, and asset workflows.
 
 This repository is the source of truth. The runtime install location is:
 
@@ -10,7 +10,6 @@ ${CODEX_HOME:-$HOME/.codex}/skills
 
 ## Skills
 
-- `implement-with-alignment`: normalize an implementation brief, align it, then execute, verify, and prepare the completed change for publication.
 - `generate-social-assets`: generate local social assets from notes, drafts, articles, transcripts, or briefs, starting with LinkedIn carousel PDFs.
 - `research-reddit-communities`: research and compare Reddit communities through agent-led discovery, then recommend one first community for credible participation.
 - `youtube-transcript-capture`: capture YouTube metadata and transcript-derived notes into the notes vault.
@@ -21,7 +20,6 @@ ${CODEX_HOME:-$HOME/.codex}/skills
 Install selected skills as symlinks:
 
 ```bash
-./install.sh implement-with-alignment
 ./install.sh generate-social-assets
 ./install.sh research-reddit-communities
 ./install.sh youtube-transcript-capture
